@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rocking Star Fan Dedicated</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Metal Mania', cursive;
+    background:#0f0f0f;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    overflow:hidden;
+}
+
+/* 🔥 TOP FIRE TITLE */
+.top-title{
+    position:absolute;
+    top:15px;
+    text-align:center;
+    font-size:17px;
+    width:100%;
+    padding:0 10px;
+    line-height:1.6;
+    background: linear-gradient(0deg,#ff0000,#ff7300,#ffff00);
+    background-size:100% 200%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: fireMove 1s linear infinite;
+    text-shadow:0 0 20px red;
+}
+
+@keyframes fireMove{
+    0%{background-position:0% 100%;}
+    100%{background-position:0% 0%;}
+}
+
+/* CARD */
+.card{
+    width:90%;
+    max-width:380px;
+    padding:30px 20px;
+    background:#000;
+    border-radius:15px;
+    border:2px solid #00ff66;
+    box-shadow:0 0 20px #00ff66,0 0 40px #00ff66;
+    text-align:center;
+}
+
+.card-title{
+    font-size:28px;
+    color:#00ff66;
+    text-shadow:0 0 15px #00ff66;
+    margin-bottom:15px;
+}
+
+.name{
+    font-size:22px;
+    color:#00ffff;
+    margin-bottom:10px;
+}
+
+/* BUTTON */
+.open-btn{
+    margin-top:10px;
+    padding:8px 18px;
+    border:none;
+    background:#00ff66;
+    border-radius:6px;
+    cursor:pointer;
+    box-shadow:0 0 15px #00ff66;
+    font-size:16px;
+}
+
+.dialogue{
+    font-family:'Noto Sans Kannada', sans-serif;
+    font-size:18px;
+    color:#ffffff;
+    text-shadow:0 0 10px red;
+    margin-top:10px;
+}
+
+/* POPUP */
+.popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.9);
+    display:none;
+    justify-content:center;
+    align-items:center;
+}
+
+.popup-content{
+    background:#000;
+    padding:25px;
+    border-radius:15px;
+    border:2px solid #00ff66;
+    box-shadow:0 0 25px #00ff66;
+    text-align:center;
+    max-width:320px;
+}
+
+.popup-content h2{
+    color:#00ff66;
+    margin-bottom:10px;
+}
+
+.popup-content img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    margin:10px 0;
+    border:3px solid #00ff66;
+    box-shadow:0 0 20px #00ff66;
+    object-fit:cover;
+}
+
+.popup-content p{
+    font-family:'Noto Sans Kannada', sans-serif;
+    font-size:16px;
+    color:white;
+}
+
+.close-btn{
+    margin-top:10px;
+    padding:6px 15px;
+    background:#ff004c;
+    border:none;
+    border-radius:5px;
+    color:white;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-title">
+🔥 Rocking Star Fan Dedicated 🔥 <br>
+🎬 Best Wishes for Toxic Cinema – Grand Release March 19, 2026 🎬 <br>
+💥 “ನಿನ್ನ ಕನಸು ದೊಡ್ಡದಾದರೆ… ಲೋಕವೇ ನಿನ್ನ ಮುಂದೆ ತಲೆಬಾಗುತ್ತದೆ!” 💥
+</div>
+
+<div class="card">
+
+<div class="card-title">
+🎂 HAPPY BIRTHDAY 🎂
+</div>
+
+<div class="name">
+NIVEDITHA D
+</div>
+
+<button class="open-btn" onclick="openWish()">
+Open Wish
+</button>
+
+<div class="dialogue">
+Rule Like a Queen 👑 • Dream Big • Stay Powerful
+</div>
+
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+      <h2>🎉 Happy Birthday Neviditha D 🎉</h2>
+
+      <!-- PHOTO -->
+      <img src="Photo/Nevi.jpg" alt="Nevi Photo">
+
+      <p>
+      ರಾಕಿಂಗ್ ಸ್ಟಾರ್ ಅಭಿಮಾನಿ ಕಡೆಯಿಂದ 💚 <br>
+      ಹುಟ್ಟು ಹಬ್ಬದ ಹಾರ್ದಿಕ ಶುಭಾಶಯಗಳು 🎂🔥 <br><br>
+      “ನಿನ್ನ ಕನಸು ದೊಡ್ಡದಾದರೆ…  
+      ಲೋಕವೇ ನಿನ್ನ ಮುಂದೆ ತಲೆಬಾಗುತ್ತದೆ!”
+      </p>
+
+      <button class="close-btn" onclick="closeWish()">Close</button>
+  </div>
+</div>
+
+<script>
+function openWish(){
+    document.getElementById("popup").style.display="flex";
+}
+
+function closeWish(){
+    document.getElementById("popup").style.display="none";
+}
+</script>
+
+</body>
+</html>
